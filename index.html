@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mind Bridge - Coming Soon</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="logo">
+      <span class="mind">Mind</span><span class="bridge">Bridge</span>
+    </div>
+    <p class="tagline">Coming soon.</p>
+  </div>
+
+  <script>
+    const form = document.getElementById("notifyForm");
+    const thanks = document.getElementById("thanksMessage");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      form.style.display = "none";
+      thanks.style.display = "block";
+    });
+  </script>
+</body>
+</html>
